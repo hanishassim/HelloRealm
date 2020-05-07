@@ -93,7 +93,8 @@
 				CB9EC44D246349E3002B8E71 /* Sources */,
 				CB9EC44E246349E3002B8E71 /* Frameworks */,
 				CB9EC44F246349E3002B8E71 /* Resources */,
-				CB9EC4702463657C002B8E71 /* ShellScript */,
+				CB9EC4702463657C002B8E71 /* Carthage */,
+				CB9EC4752464660D002B8E71 /* Carthage Outdated? */,
 			);
 			buildRules = (
 			);
@@ -153,7 +154,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CB9EC4702463657C002B8E71 /* ShellScript */ = {
+		CB9EC4702463657C002B8E71 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -163,6 +164,7 @@
 			);
 			inputPaths = (
 			);
+			name = Carthage;
 			outputFileListPaths = (
 				"$(SRCROOT)/output.xcfilelist",
 			);
@@ -171,6 +173,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		CB9EC4752464660D002B8E71 /* Carthage Outdated? */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Outdated?";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
